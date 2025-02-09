@@ -29,7 +29,7 @@ app.get('/edit/:filename', (req,res) => {
 })
 
 app.post('/edit', (req,res) => {
-    fs.rename(`./files/${req.body.previousName}`, `./files/${req.body.new}`, (err)=>{
+    fs.rename(`./files/${req.body.previousName}`, `./files/${req.body.new}.txt`, (err)=>{
         res.redirect('/');
     })
 
